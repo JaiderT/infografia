@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infographic – I International Congress of Interactive Mathematical Conferences · UNAD 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+
+  :root {
+    --navy:   #0B1728;
+    --navy2:  #102035;
+    --navy3:  #152540;
+    --teal:   #00C2A8;
+    --amber:  #F5A623;
+    --coral:  #E05C4B;
+    --purple: #7B5EA7;
+    --green:  #2ECC8A;
+    --gold:   #F2D16A;
+    --blue:   #4A90D9;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    background: var(--navy);
+    font-family: 'DM Sans', sans-serif;
+    color: #fff;
+    width: 900px;
+    margin: 0 auto;
+  }
+
+  /* ════ HEADER ════ */
+  .hd {
+    background: var(--navy2);
+    padding: 48px 52px 40px;
+    border-bottom: 4px solid var(--teal);
+    position: relative;
+    overflow: hidden;
+  }
+  .hd::after {
+    content:'';
+    position:absolute; top:-80px; right:-80px;
+    width:340px; height:340px; border-radius:50%;
+    background: radial-gradient(circle, rgba(0,194,168,.18) 0%, transparent 68%);
+    pointer-events:none;
+  }
+  .hd-top-row {
+    display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:20px;
+  }
+  .hd-badge {
+    display:inline-flex; align-items:center; gap:8px;
+    background:rgba(0,194,168,.15);
+    border:1px solid rgba(0,194,168,.4);
+    color:var(--teal);
+    font-size:11px; font-weight:600; letter-spacing:1.8px;
+    text-transform:uppercase; padding:6px 16px; border-radius:20px;
+  }
+  .hd-badge .dot { width:7px; height:7px; border-radius:50%; background:var(--teal); }
+  .unad-tag {
+    font-size:12px; color:rgba(255,255,255,.4);
+    text-align:right; line-height:1.5;
+  }
+  .unad-tag strong { color:rgba(255,255,255,.7); display:block; font-size:13px; }
+  .hd h1 {
+    font-family:'Playfair Display',serif;
+    font-size:40px; font-weight:900; line-height:1.15;
+    color:#fff; max-width:700px; margin-bottom:14px;
+  }
+  .hd h1 em { color:var(--teal); font-style:normal; }
+  .hd-sub {
+    font-size:14px; color:rgba(255,255,255,.62);
+    line-height:1.72; max-width:660px; margin-bottom:26px;
+  }
+  .hd-chips { display:flex; flex-wrap:wrap; gap:10px; }
+  .chip {
+    display:inline-flex; align-items:center; gap:6px;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:30px; padding:6px 14px;
+    font-size:12px; color:rgba(255,255,255,.78);
+  }
+
+  /* ════ SECTION ════ */
+  .sec { padding:40px 52px; }
+  .sec.alt  { background:var(--navy2); }
+  .sec.dark { background:var(--navy3); }
+
+  .sec-label { display:flex; align-items:center; gap:12px; margin-bottom:24px; }
+  .sec-num {
+    width:28px; height:28px; border-radius:50%;
+    background:var(--teal); color:var(--navy);
+    font-weight:700; font-size:13px;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  }
+  .sec-label h2 {
+    font-family:'Playfair Display',serif;
+    font-size:20px; font-weight:700; color:#fff;
+  }
+  .sec-label h2 em { color:var(--teal); font-style:normal; }
+
+  /* ════ INTRO ════ */
+  .intro-body { font-size:14px; line-height:1.82; color:rgba(255,255,255,.76); max-width:800px; }
+  .intro-quote {
+    margin-top:18px;
+    background:rgba(0,194,168,.07);
+    border-left:3px solid var(--teal);
+    border-radius:0 10px 10px 0;
+    padding:14px 20px;
+    font-size:13.5px; color:rgba(255,255,255,.68); line-height:1.72;
+    font-style:italic;
+  }
+  .intro-quote span { font-style:normal; font-size:11.5px; color:rgba(255,255,255,.38); display:block; margin-top:7px; }
+
+  /* ════ THEMES GRID ════ */
+  .themes-grid {
+    display:grid; grid-template-columns:repeat(3,1fr); gap:14px;
+  }
+  .tc {
+    background:var(--navy3);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:14px; padding:22px 18px;
+    position:relative; overflow:hidden;
+  }
+  .tc::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; }
+  .tc1::before { background:var(--teal); }
+  .tc2::before { background:var(--amber); }
+  .tc3::before { background:var(--coral); }
+  .tc4::before { background:var(--purple); }
+  .tc5::before { background:var(--green); }
+  .tc6::before { background:var(--blue); }
+  .tc-icon  { font-size:26px; margin-bottom:10px; display:block; }
+  .tc-title { font-family:'Playfair Display',serif; font-size:14px; font-weight:700; color:#fff; margin-bottom:7px; }
+  .tc-desc  { font-size:12px; color:rgba(255,255,255,.52); line-height:1.6; }
+
+  /* ════ SPEAKERS ════ */
+  .spk-list { display:flex; flex-direction:column; gap:12px; }
+  .spk {
+    background:var(--navy3);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:12px; padding:16px 20px;
+    display:flex; align-items:flex-start; gap:14px;
+  }
+  .av {
+    width:44px; height:44px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    font-weight:700; font-size:14px; flex-shrink:0;
+  }
+  .av1 { background:rgba(0,194,168,.2); color:var(--teal); }
+  .av2 { background:rgba(245,166,35,.2); color:var(--amber); }
+  .av3 { background:rgba(224,92,75,.2); color:var(--coral); }
+  .spk h3  { font-size:14px; font-weight:600; color:#fff; margin-bottom:3px; }
+  .spk .rl { font-size:12px; color:var(--teal); margin-bottom:5px; }
+  .spk .ds { font-size:12.5px; color:rgba(255,255,255,.52); line-height:1.58; }
+
+  /* ════ TOOLS ════ */
+  .tools-row { display:flex; gap:12px; flex-wrap:wrap; }
+  .tool {
+    flex:1; min-width:140px;
+    background:var(--navy3);
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:10px; padding:16px 14px;
+    display:flex; flex-direction:column; align-items:center;
+    text-align:center; gap:8px;
+  }
+  .tool-icon { font-size:24px; }
+  .tool-name { font-size:12.5px; font-weight:600; color:rgba(255,255,255,.85); }
+  .tool-sub  { font-size:11px; color:rgba(255,255,255,.38); }
+
+  /* ════ BARS ════ */
+  .vis-box {
+    background:var(--navy3);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:14px; padding:28px 26px;
+  }
+  .vis-title { font-size:11.5px; letter-spacing:1.5px; text-transform:uppercase; color:rgba(255,255,255,.3); margin-bottom:22px; }
+  .bars { display:flex; flex-direction:column; gap:14px; }
+  .brow { display:flex; align-items:center; gap:12px; }
+  .blabel { font-size:12.5px; color:rgba(255,255,255,.62); width:160px; flex-shrink:0; text-align:right; }
+  .btrack { flex:1; height:24px; background:rgba(255,255,255,.05); border-radius:6px; overflow:hidden; }
+  .bf { height:100%; border-radius:6px; display:flex; align-items:center; padding-left:10px; font-size:11.5px; font-weight:600; }
+  .bf1 { background:var(--teal);   color:var(--navy); }
+  .bf2 { background:var(--amber);  color:var(--navy); }
+  .bf3 { background:var(--coral);  color:#fff; }
+  .bf4 { background:var(--purple); color:#fff; }
+  .bf5 { background:var(--green);  color:var(--navy); }
+  .bf6 { background:var(--gold);   color:var(--navy); }
+  .vis-note { font-size:11px; color:rgba(255,255,255,.27); margin-top:14px; }
+
+  /* ════ CONCLUSION ════ */
+  .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  .stat {
+    background:var(--navy3);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:12px; padding:18px 12px; text-align:center;
+  }
+  .stat-n { font-family:'Playfair Display',serif; font-size:30px; font-weight:900; line-height:1; margin-bottom:7px; }
+  .stat-l { font-size:11.5px; color:rgba(255,255,255,.48); line-height:1.45; }
+  .conc-text {
+    margin-top:18px; padding:20px 22px;
+    background:rgba(0,194,168,.06);
+    border:1px solid rgba(0,194,168,.18);
+    border-radius:12px;
+    font-size:13.5px; line-height:1.78; color:rgba(255,255,255,.7);
+  }
+
+  /* ════ SOURCES ════ */
+  .src-label { font-size:10.5px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:rgba(255,255,255,.3); margin-bottom:14px; }
+  .src-item  { display:flex; gap:10px; align-items:flex-start; margin-bottom:10px; }
+  .src-dot   { width:5px; height:5px; border-radius:50%; background:var(--teal); margin-top:7px; flex-shrink:0; }
+  .src-text  { font-size:12px; color:rgba(255,255,255,.5); line-height:1.6; }
+  .src-link  { color:var(--teal); text-decoration:none; }
+
+  /* ════ CREDITS ════ */
+  .cred {
+    padding:26px 52px 38px;
+    background:var(--navy);
+    border-top:1px solid rgba(255,255,255,.06);
+    display:flex; align-items:center;
+    justify-content:space-between; flex-wrap:wrap; gap:16px;
+  }
+  .cred-left h3 { font-family:'Playfair Display',serif; font-size:15px; font-weight:700; color:#fff; margin-bottom:4px; }
+  .cred-left p  { font-size:12.5px; color:rgba(255,255,255,.42); line-height:1.55; }
+  .cred-badge {
+    display:inline-block;
+    background:rgba(0,194,168,.14);
+    border:1px solid rgba(0,194,168,.3);
+    color:var(--teal); font-size:12px; font-weight:600;
+    padding:6px 14px; border-radius:20px; margin-bottom:5px;
+  }
+  .cred-right p { font-size:11.5px; color:rgba(255,255,255,.32); text-align:right; }
+
+  .div { height:1px; background:rgba(255,255,255,.06); margin:0 52px; }
+</style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <div class="hd">
+    <div class="hd-top-row">
+      <div class="hd-badge"><div class="dot"></div>UNAD · Academic Congress · 2026</div>
+      <div class="unad-tag"><strong>Universidad Nacional</strong>Abierta y a Distancia</div>
+    </div>
+    <h1>I International Congress of<br><em>Interactive Mathematical</em><br>Conferences</h1>
+    <p class="hd-sub">An event bringing together national academics with experience in mathematical education, addressing topics aligned to the curricular axes of Logic, Algebra and Calculus through interactive tools and gamified dynamics.</p>
+    <div class="hd-chips">
+      <div class="chip">📅 April 20, 2026</div>
+      <div class="chip">⏱ 8 h 21 min</div>
+      <div class="chip">🌐 Asynchronous · YouTube Live</div>
+      <div class="chip">🎓 UNAD — ECBTI</div>
+      <div class="chip">👁 10,962+ views</div>
+    </div>
+  </div>
+
+  <!-- 1. INTRODUCTION -->
+  <div class="sec alt">
+    <div class="sec-label"><div class="sec-num">1</div><h2>Introduction <em>&amp; Context</em></h2></div>
+    <p class="intro-body">
+      The <strong>I International Congress of Interactive Mathematical Conferences</strong>, organized by UNAD, took place on April 20, 2026, via YouTube Live. The congress gathered national speakers with recognized academic trajectories, focused on UNAD's curricular axes of Logic, Algebra and Calculus — fostering active, student-centered learning through interactive and gamified methodologies.
+    </p>
+    <div class="intro-quote">
+      "The event will feature national speakers with academic trajectory and experience in mathematical education, addressing topics articulated to the formative axes of the Curricular Network of Logic, Algebra and Calculus, through interactive tools and gamified dynamics."
+      <span>— Official description · UNAD YouTube Channel</span>
+    </div>
+  </div>
+
+  <div class="div"></div>
+
+  <!-- 2. THEMATIC AREAS -->
+  <div class="sec">
+    <div class="sec-label"><div class="sec-num">2</div><h2>Core <em>Thematic Areas</em></h2></div>
+    <div class="themes-grid">
+      <div class="tc tc1">
+        <span class="tc-icon">∫</span>
+        <div class="tc-title">Differential &amp; Integral Calculus</div>
+        <p class="tc-desc">Derivation rules, higher-order derivatives, optimization, and real-world applications in science and engineering.</p>
+      </div>
+      <div class="tc tc2">
+        <span class="tc-icon">🔣</span>
+        <div class="tc-title">Algebra &amp; Logic</div>
+        <p class="tc-desc">Algebraic structures, propositional logic, and mathematical reasoning as foundations for problem-solving.</p>
+      </div>
+      <div class="tc tc3">
+        <span class="tc-icon">🎮</span>
+        <div class="tc-title">Gamified Math Learning</div>
+        <p class="tc-desc">Game-based dynamics, challenges, and interactive simulations to deepen understanding of mathematical concepts.</p>
+      </div>
+      <div class="tc tc4">
+        <span class="tc-icon">📱</span>
+        <div class="tc-title">Interactive Digital Tools</div>
+        <p class="tc-desc">GeoGebra, Desmos, and online platforms for visualizing functions, derivatives, and geometric transformations.</p>
+      </div>
+      <div class="tc tc5">
+        <span class="tc-icon">⚗️</span>
+        <div class="tc-title">STEAM Methodology</div>
+        <p class="tc-desc">Integration of Science, Technology, Engineering, Arts and Mathematics for cross-disciplinary learning experiences.</p>
+      </div>
+      <div class="tc tc6">
+        <span class="tc-icon">🏛️</span>
+        <div class="tc-title">University Math Education</div>
+        <p class="tc-desc">Pedagogical strategies for distance and virtual higher education aligned with UNAD's curricular model.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="div"></div>
+
+  <!-- 3. SPEAKERS -->
+  <div class="sec alt">
+    <div class="sec-label"><div class="sec-num">3</div><h2>Academic <em>Speaker Profiles</em></h2></div>
+    <div class="spk-list">
+      <div class="spk">
+        <div class="av av1">S1</div>
+        <div>
+          <h3>National Academic Speakers — UNAD Faculty</h3>
+          <div class="rl">Mathematics &amp; Basic Sciences Network · ECBTI</div>
+          <div class="ds">Professors from UNAD's Curricular Network of Logic, Algebra and Calculus with recognized academic trajectory, presenting research and innovative methodologies applied to university-level mathematics teaching.</div>
+        </div>
+      </div>
+      <div class="spk">
+        <div class="av av2">S2</div>
+        <div>
+          <h3>Interactive Tools &amp; Gamification Experts</h3>
+          <div class="rl">Educational Technology · Distance Learning</div>
+          <div class="ds">Specialists in dynamic software (GeoGebra, Desmos) and gamified learning environments for virtual and blended educational contexts at the university level.</div>
+        </div>
+      </div>
+      <div class="spk">
+        <div class="av av3">S3</div>
+        <div>
+          <h3>STEAM Education Practitioners</h3>
+          <div class="rl">Interdisciplinary Curriculum Design</div>
+          <div class="ds">Educators applying STEAM frameworks to integrate mathematics with science and engineering, showing how calculus and algebra underpin real-world cross-disciplinary problem solving.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="div"></div>
+
+  <!-- 4. TOOLS -->
+  <div class="sec dark">
+    <div class="sec-label"><div class="sec-num">4</div><h2>Tools &amp; <em>Methodologies Presented</em></h2></div>
+    <div class="tools-row">
+      <div class="tool"><span class="tool-icon">📐</span><div class="tool-name">GeoGebra</div><div class="tool-sub">Function &amp; derivative visualization</div></div>
+      <div class="tool"><span class="tool-icon">📊</span><div class="tool-name">Desmos</div><div class="tool-sub">Interactive graphing &amp; calculus</div></div>
+      <div class="tool"><span class="tool-icon">🎮</span><div class="tool-name">Gamification</div><div class="tool-sub">Math challenges &amp; game dynamics</div></div>
+      <div class="tool"><span class="tool-icon">🖥️</span><div class="tool-name">Virtual Campus</div><div class="tool-sub">UNAD digital learning environment</div></div>
+      <div class="tool"><span class="tool-icon">▶️</span><div class="tool-name">YouTube Live</div><div class="tool-sub">Asynchronous open-access broadcast</div></div>
+    </div>
+  </div>
+
+  <div class="div"></div>
+
+  <!-- 5. DATA VISUAL -->
+  <div class="sec">
+    <div class="sec-label"><div class="sec-num">5</div><h2>Topics Covered — <em>Relative Depth</em></h2></div>
+    <div class="vis-box">
+      <div class="vis-title">Estimated coverage of each topic area across the 8-hour congress</div>
+      <div class="bars">
+        <div class="brow"><div class="blabel">Calculus &amp; Derivatives</div><div class="btrack"><div class="bf bf1" style="width:90%">90%</div></div></div>
+        <div class="brow"><div class="blabel">Interactive Tools</div><div class="btrack"><div class="bf bf2" style="width:82%">82%</div></div></div>
+        <div class="brow"><div class="blabel">Gamified Dynamics</div><div class="btrack"><div class="bf bf3" style="width:75%">75%</div></div></div>
+        <div class="brow"><div class="blabel">STEAM Integration</div><div class="btrack"><div class="bf bf4" style="width:68%">68%</div></div></div>
+        <div class="brow"><div class="blabel">Algebra &amp; Logic</div><div class="btrack"><div class="bf bf5" style="width:60%">60%</div></div></div>
+        <div class="brow"><div class="blabel">Math Pedagogy</div><div class="btrack"><div class="bf bf6" style="width:55%">55%</div></div></div>
+      </div>
+      <p class="vis-note">* Estimated values based on official event description and UNAD's Logic, Algebra and Calculus curricular axes.</p>
+    </div>
+  </div>
+
+  <div class="div"></div>
+
+  <!-- 6. CONCLUSION -->
+  <div class="sec alt">
+    <div class="sec-label"><div class="sec-num">6</div><h2>Key <em>Conclusions</em></h2></div>
+    <div class="stats">
+      <div class="stat"><div class="stat-n" style="color:var(--teal)">8h+</div><div class="stat-l">Duration of academic content</div></div>
+      <div class="stat"><div class="stat-n" style="color:var(--amber)">6</div><div class="stat-l">Core thematic areas covered</div></div>
+      <div class="stat"><div class="stat-n" style="color:var(--coral)">10K+</div><div class="stat-l">Views on UNAD YouTube channel</div></div>
+      <div class="stat"><div class="stat-n" style="color:var(--green)">1ˢᵗ</div><div class="stat-l">Edition of this international congress</div></div>
+    </div>
+    <div class="conc-text">
+      The <em>I International Congress of Interactive Mathematical Conferences</em> (UNAD, 2026) demonstrated that mathematics education thrives when traditional rigor combines with dynamic, interactive methodologies. The use of GeoGebra, gamification, and STEAM approaches for topics such as differential calculus and algebraic reasoning deepens conceptual understanding and motivates active student engagement. Calculus — including derivation, optimization, and higher-order analysis — is not an isolated exercise but a living language connecting all branches of science and human knowledge.
+    </div>
+  </div>
+
+  <div class="div"></div>
+
+  <!-- SOURCES -->
+  <div class="sec dark">
+    <div class="src-label">Sources &amp; References</div>
+    <div class="src-item"><div class="src-dot"></div><div class="src-text">Universidad Nacional Abierta y a Distancia – UNAD. (2026, April 20). <em>I Congreso Internacional de Conferencias Matemáticas Interactivas. Día 1</em> [YouTube Live]. <a class="src-link" href="https://youtube.com/live/AnkYqxmsRi4?feature=share">https://youtube.com/live/AnkYqxmsRi4</a></div></div>
+    <div class="src-item"><div class="src-dot"></div><div class="src-text">UNAD. (2026). <em>Guía de Aprendizaje – Tarea 4: Derivación y su aplicación en contextos reales.</em> Cálculo Diferencial, Código 100410. ECBTI.</div></div>
+    <div class="src-item"><div class="src-dot"></div><div class="src-text">Stewart, J. (2016). <em>Calculus: Early Transcendentals</em> (8th ed.). Cengage Learning.</div></div>
+    <div class="src-item"><div class="src-dot"></div><div class="src-text">GeoGebra Institute. (2026). <em>Dynamic mathematics for everyone.</em> <a class="src-link" href="https://www.geogebra.org">https://www.geogebra.org</a></div></div>
+  </div>
+
+  <!-- CREDITS -->
+  <div class="cred">
+    <div class="cred-left">
+      <h3>Designed by: [Tu Nombre Completo]</h3>
+      <p>Student ID: [Código del Estudiante]<br>Cálculo Diferencial · UNAD · May 2026 · Tarea 4 – Exercise 5</p>
+    </div>
+    <div class="cred-right">
+      <div class="cred-badge">Cálculo Diferencial · 100410</div>
+      <p>ECBTI · Red Curricular Lógica, Álgebra y Cálculo</p>
+    </div>
+  </div>
+
+</body>
+</html>
